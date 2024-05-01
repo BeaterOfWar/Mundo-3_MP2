@@ -1,10 +1,9 @@
---CRIAÇÃO DO USUÁRIO
+
 INSERT INTO Usuario VALUES ('OP1', 'OP1')
 INSERT INTO Usuario VALUES ('OP2', 'OP2')
 
 SELECT * FROM Usuario
 
---Inserir alguns produtos na base de dados
 INSERT INTO Produto VALUES ('Banana', '100', '5.00')
 INSERT INTO Produto VALUES ('Laranja', '500', '2.00')
 INSERT INTO Produto VALUES ('Manga', '800', '4.00')
@@ -14,14 +13,6 @@ SELECT * FROM Produto
 BEGIN TRAN DELETE Produto WHERE idProduto = 2
 --COMMIT
 
-/*
- 2. Criar pessoas físicas e jurídicas na base de dados:
-
-Obter o próximo id de pessoa a partir da sequence
-Incluir na tabela pessoa os dados comuns
-Incluir em pessoa física o CPF, efetuando o
-relacionamento com pessoa.
-*/
 
 SELECT * FROM Pessoa
 
@@ -40,8 +31,6 @@ SELECT * FROM PessoaFisica
 
 SELECT * FROM Movimento
 
-/* Criar algumas movimentações na base de dados, obtendo um conjunto como o que
-é apresentado a seguir, onde E representa Entrada e S representa Saída.*/
 INSERT INTO Movimento(Pessoa_idPessoa, Usuario_idUsuario, Produto_idProduto, quantidade, precoUnitario)
 VALUES (1, 1, 1, 10, 5.00), -- Entrada
        (2, 2, 1, 5,  5.00),  -- Saída
