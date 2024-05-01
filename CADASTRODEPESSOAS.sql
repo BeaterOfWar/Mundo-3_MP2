@@ -6,7 +6,6 @@ SELECT * FROM Usuario
 
 --Inserir alguns produtos na base de dados
 INSERT INTO Produto VALUES ('Banana', '100', '5.00')
-INSERT INTO Produto VALUES ('aaaa', '100', '5.00')
 INSERT INTO Produto VALUES ('Laranja', '500', '2.00')
 INSERT INTO Produto VALUES ('Manga', '800', '4.00')
 
@@ -36,3 +35,15 @@ INSERT INTO Pessoafisica SELECT cpf = '77363270252', idPessoa FROM Pessoa WHERE 
 INSERT INTO Pessoafisica SELECT cpf = '15304243641', idPessoa FROM Pessoa WHERE idPessoa = 2
 INSERT INTO PessoaJuridica SELECT cnpj = '44555252000152', idPessoa FROM Pessoa WHERE idPessoa = 3
 
+
+SELECT * FROM PessoaFisica
+
+SELECT * FROM Movimento
+
+/* Criar algumas movimentações na base de dados, obtendo um conjunto como o que
+é apresentado a seguir, onde E representa Entrada e S representa Saída.*/
+INSERT INTO Movimento(Pessoa_idPessoa, Usuario_idUsuario, Produto_idProduto, quantidade, precoUnitario)
+VALUES (1, 1, 1, 10, 5.00), -- Entrada
+       (2, 2, 1, 5,  5.00),  -- Saída
+       (3, 1, 3, 15,2.00), -- Entrada
+       (1, 2, 4, 20, 4.00);  -- Saída
